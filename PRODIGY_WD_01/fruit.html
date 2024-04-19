@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Pacifico&display=swap' rel="stylesheet">
+    
+</head>
+<body>
+
+    <header><a href="index.html">
+    <div class="logo"><img src="img/Untitled design.png" alt=""></div></a>
+    <div class="menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html" class="active" data-target="home">Home</a></li>
+            <li><a href="index.html" data-target="about">About</a></li>
+            <li><a href="index.html" data-target="service">Service</a></li>
+            <li><a href="index.html" data-target="review">Review</a></li>
+            <li><a href="index.html" data-target="contact">Contact</a></li> 
+        </ul>
+    </nav>
+</header>
+<section id="service" class="service-section">
+<div class="container">
+    <div class="card">
+        <img src="img/fruit/banana.jpeg" alt="Product Image">
+        <h2>Banana</h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/l.jpeg" alt="Product Image">
+        <h2>Layered</h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/pl.jpg" alt="Product Image">
+        <h2>Plum</h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/ch.jpg" alt="Product Image">
+        <h2>Cherry </h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/pn.jpeg" alt="Product Image">
+        <h2>Pineapple </h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/Rasp.jpg" alt="Product Image">
+        <h2>Raspberry </h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/st.jpg" alt="Product Image">
+        <h2>Strawberry </h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/ca.jpg" alt="Product Image">
+        <h2>Caramel_Apple</h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+    <div class="card">
+        <img src="img/fruit/fn.jpeg" alt="Product Image">
+        <h2>Fruit N Nut </h2>
+        <p>Description of the product.</p>
+        <p class="price">$19.99</p>
+        <div class="rating">⭐️⭐️⭐️⭐️</div>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+
+    <!-- Add more cards here -->
+
+</div>
+</section>
+
+<footer>
+    &copy; 2021 - Todos los derechos reservados | Desarroll
+</footer>
+<script>
+     menu = document.querySelector('.menu');
+     menu.onclick = function(){
+        navBar = document.querySelector('.nav-bar');
+        navBar.classList.toggle("active")
+     }
+</script>
+<script> const navLinks = document.querySelectorAll('.nav-bar ul li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+    window.scrollTo({
+        top: targetSection.offsetTop,
+        behavior: 'smooth'
+        });
+    });
+});
+</script>
+<script>
+    menu = document.querySelector('.menu');
+    menu.onclick = function(){
+       navBar = document.querySelector('.nav-bar');
+       navBar.classList.toggle("active")
+    }
+</script>
+<script> const navLinks = document.querySelectorAll('.nav-bar ul li a');
+
+navLinks.forEach(link => {
+   link.addEventListener('click', function(event) {
+       event.preventDefault();
+       const targetId = this.getAttribute('data-target');
+       const targetSection = document.getElementById(targetId);
+   window.scrollTo({
+       top: targetSection.offsetTop,
+       behavior: 'smooth'
+       });
+   });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,549 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Google Sans Regular";
+    text-decoration: none;
+}
+
+body{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans Regular";
+    text-decoration: none; /* Background color with transparency */
+    background-image: url('img/background.jpg'); /* Add the path to your image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    padding-top: 60px;
+}
+
+/* Calculate the height of the navbar */
+/* Ensure the height includes any padding or borders */
+.navbar {
+    height: 80px; /* Adjust as needed */
+    
+  }
+  
+  /* Apply padding to the top of each section */
+  /* Ensure the padding matches the height of the navbar */
+  .section {
+    padding-top: 80px; /* Same as navbar height */
+  }
+  
+
+header{
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    background:#ADD8E6;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 100px;
+    position: fixed;
+    z-index: 1000px;
+
+}
+
+.home-section,
+.about-section,
+.service-section,
+.review-section,
+.contact-section {
+    padding-top: 80px; /* Add padding equal to the height of the header */
+    padding-bottom: 50px; /* Add some padding at the bottom for spacing */
+    /* Other styles for your sections */
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    margin-top: 15px;
+    color: #fff;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+.menu{
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    color: #11101b;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav-bar ul li a:hover{
+    color: #fefefe;
+    background: #11101b;
+
+}
+.nav-bar ul li a.active{
+    color: #fefefe;
+    background: #11101b;
+}
+
+@media screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+@media screen and (max-width:1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width:900px){
+   .menu{
+    display: block;
+    cursor: pointer;
+   }
+   .menu .line{
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+   }
+   .nav-bar{
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #ADD8E6 ;
+    transition: 0.5s;
+    overflow: hidden;
+   }
+   .nav-bar.active{
+    height: 450px;
+   }
+   .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+   }
+   .nav-bar.active ul{
+    opacity: 1;
+   }
+   .nav-bar ul li a{
+    margin-bottom: 12px;
+   }
+}
+
+/* CSS for the home section */
+.home-section {
+    padding: 50px;
+    background-image: url('img/background.jpg'); /* Add the path to your image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center;
+    text-align: center;
+    height: 700px; /* Set a fixed height */
+   
+    margin-top: 80px;
+}
+
+/* CSS for the about section */
+.about-section {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 500px; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+
+.service-section {
+    padding: 50px;
+    text-align: center;
+    height: auto; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+/* CSS for the service section */
+
+/* CSS for the h2 tag */
+h2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-family: "Pacifico", cursive;
+    font-size: 2em;
+    
+}
+
+/* Double line effect */
+h2::before,
+ h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+/* Double line effect on hover */
+ h2:hover::before,
+ h2:hover::after {
+    background-color: #000; /* Change to the desired color */
+}
+
+/* Gap between lines */
+ h2::after {
+    bottom: -3px; /* Adjust the value to create a gap between the lines */
+}
+
+.cake h3::before,
+.cake  h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+/* Double line effect on hover */
+.cake h3:hover::before,
+.cake h3:hover::after {
+    background-color: #000; /* Change to the desired color */
+}
+
+/* Gap between lines */
+.cake h3::after {
+    bottom: -3px; /* Adjust the value to create a gap between the lines */
+}
+
+
+/* CSS for the cake cards */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cake {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Distribute space evenly */
+    height: 600px; 
+    
+}
+
+.cake:hover {
+    opacity: 1;
+}
+
+.cake img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+
+.cake h3 {
+    margin-top: auto;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-family: "Pacifico", cursive;
+   
+}
+
+
+
+
+
+/* CSS for the review section */
+.review-section {
+    padding: 50px;
+    text-align: center;
+    
+}
+
+/* CSS for the small review cards */
+.containers {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 35px;
+}
+
+.review-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+    
+}
+
+.review-rating {
+    margin-bottom: 5px;
+}
+
+.rating-stars {
+    color: #ffc107; /* yellow color for stars */
+}
+
+.review-text {
+    margin-bottom: 5px;
+    height: 70px; /* limit the height of review text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.review-author {
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
+.review-date {
+    color: #666;
+    font-size: 0.8em;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* CSS for the contact form */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+   
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contain {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 38px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Add more styling to the contact section */
+
+.contact-section {
+    
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contain {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contain label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contain input,
+.contain textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contain input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contain input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.home-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.home-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+   
+}
+
+.home-section p {
+    font-size: 1.1em;
+    color: #000;
+    margin-bottom: 40px;
+    padding-top: 50px;
+}
+
+.home-section .btn {
+    display: inline-block;
+    padding: 10px 20px;     
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-section .btn:hover {
+    background-color: #555;
+}
+ 
+  
+
+
+/* CSS for the footer */
+footer {
+    background-color:#ADD8E6; /* Dark background color */
+    color: #11101b; /* Text color */
+    text-align: center; /* Center-align the text */
+    padding: 20px 0; /* Add padding at the top and bottom */
+    position: fixed; /* Fixed position at the bottom of the viewport */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    font-weight: bold;
+
+}
+
+/* CSS for the link inside the footer */
+footer a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    
+}
+

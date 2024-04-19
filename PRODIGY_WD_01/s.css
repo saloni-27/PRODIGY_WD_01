@@ -1,0 +1,229 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Google Sans Regular";
+    text-decoration: none;
+}
+
+body{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans Regular";
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.5); /* Background color with transparency */
+    padding-top: 60px;
+}
+
+
+header{
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    background:#ADD8E6;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 100px;
+    position: fixed;
+    z-index: 1000px;
+
+}
+.service-section {
+    padding: 50px;
+    text-align: center;
+    height: auto; /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.card:hover {
+    opacity: 1;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+   
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card .price {
+    font-size: 18px;
+    color: #333;
+    margin-top: auto;
+}
+
+.card .rating {
+    color: #ffa500;
+    margin-bottom: 10px;
+}
+
+.order-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.order-btn:hover {
+    background-color: #0056b3;
+}
+
+section {
+    padding: 20px; /* Add padding inside each section */ 
+    margin-top: 20px; /* Add margin at the top of each section */
+}
+.logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    margin-top: 15px;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+.menu{
+    display: none;
+}
+.nav-bar ul{
+    display: flex;
+}
+.nav-bar ul li a{
+    display: block;
+    color: #11101b;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.nav-bar ul li a:hover{
+    color: #fefefe;
+    background: #11101b;
+
+}
+.nav-bar ul li a.active{
+    color: #fefefe;
+    background: #11101b;
+}
+
+@media screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+@media screen and (max-width:1100px){
+    header{
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width:900px){
+   .menu{
+    display: block;
+    cursor: pointer;
+   }
+   .menu .line{
+    width: 30px;
+    height: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+   }
+   .nav-bar{
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #ADD8E6;
+    transition: 0.5s;
+    overflow: hidden;
+   }
+   .nav-bar.active{
+    height: 450px;
+   }
+   .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+   }
+   .nav-bar.active ul{
+    opacity: 1;
+   }
+   .nav-bar ul li a{
+    margin-bottom: 12px;
+   }
+}
+
+
+/* CSS for the footer */
+footer {
+    background-color: #ADD8E6; /* Dark background color */
+    color: #11101b; /* Text color */
+    text-align: center; /* Center-align the text */
+    padding: 20px 0; /* Add padding at the top and bottom */
+    position: fixed; /* Fixed position at the bottom of the viewport */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    font-weight: bold;
+}
+
+/* CSS for the link inside the footer */
+footer a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    
+}
+
